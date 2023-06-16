@@ -1,0 +1,10 @@
+---
+
+export interface Props {
+	social: string;
+	link: string;
+}
+const {social, link} = Astro.props;
+---
+
+<li><a href={link}>{social}</a></li>
