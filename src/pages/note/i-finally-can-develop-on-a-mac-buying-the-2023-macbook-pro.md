@@ -20,7 +20,7 @@ Building a Hackintosh was a complex and challenging experience. Funny enough I e
     title="Sushii&#39;s Hackintosh Prodigy - Editing/Gaming - 2nd Build - Timelapse"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    className="w-full h-96 my-4"
+    className="w-full aspect-video h-full my-4"
     allowfullscreen
 ></iframe>
 

@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 const { title, image } = Astro.props.frontmatter;
 ---
 
@@ -14,8 +15,12 @@ const { title, image } = Astro.props.frontmatter;
 	</head>
 	<body>
 		<main class="min-h-screen w-full">
-			<article class="py-24 w-2/3 mx-auto border-l border-r border-black">
-				<a class="my-12 p-4 hover:underline" href="/">← Go back</a>
+			<article
+				class="py-8 md:py-24 md:w-2/3 mx-auto border-l border-r border-black"
+			>
+				<a class="my-12 p-4 hover:underline" href="/projects"
+					>← Go back</a
+				>
 				<h1 class="text-5xl p-4">{title}</h1>
 				<img
 					src={image}
@@ -28,12 +33,7 @@ const { title, image } = Astro.props.frontmatter;
 				</div>
 			</article>
 		</main>
-		<footer class="border-t border-black">
-			<div class="w-2/3 mx-auto h-24 flex justify-between items-center">
-				<div>made with <a href="https://astro.build">astro</a></div>
-				<div>Jason-Kyle De Lara &copy; {new Date().getFullYear()}</div>
-			</div>
-		</footer>
+		<Footer />
 	</body>
 </html>
 <style is:global>

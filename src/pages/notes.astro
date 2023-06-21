@@ -1,0 +1,37 @@
+---
+import ListLayout from "../layouts/ListLayout.astro";
+const notes = await Astro.glob("../pages/note/*.md");
+---
+
+<ListLayout title="All Notes">
+	<ul class="flex flex-col gap-2">
+		{
+			notes.map((note) => (
+				<li class="flex flex-between">
+					<a
+						class="underline"
+						href={"/note/" + note.frontmatter.slug}
+					>
+						{note.frontmatter.title}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+	<!-- <div class="mx-2 flex flex-col gap-2">
+		{
+			notes.map((note) => (
+				<a
+					class=" border border-black p-2"
+					href={"/note/" + note.frontmatter.slug}
+				>
+					<div class="underline">{note.frontmatter.title}</div>
+					<div>
+						Published:{" "}
+						{new Date(note.frontmatter.date).toLocaleDateString()}
+					</div>
+				</a>
+			))
+		}
+	</div> -->
+</ListLayout>

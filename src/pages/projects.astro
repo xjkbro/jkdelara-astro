@@ -1,0 +1,18 @@
+---
+import ListLayout from "../layouts/ListLayout.astro";
+const projects = await Astro.glob("../pages/project/*.md");
+---
+
+<ListLayout title="All Projects">
+	<ul>
+		{
+			projects.map((project) => (
+				<li>
+					<a href={"/project/" + project.frontmatter.slug}>
+						{project.frontmatter.title}
+					</a>
+				</li>
+			))
+		}
+	</ul>
+</ListLayout>

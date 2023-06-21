@@ -1,0 +1,18 @@
+---
+const notes = await Astro.glob("../pages/note/*.md");
+---
+
+<div class="min-w-[27vw] text-right">
+	<h2 class="text-2xl mt-4 mr-4 md:text-5xl md:mt-8 md:mr-8">NOTES</h2>
+</div>
+<ul class="w-fit min-h-[12rem] pl-8 flex flex-col gap-2 mt-4">
+	{
+		notes.map((note) => (
+			<li class="underline text-xs md:text-normal">
+				<a href={`/note/${note.frontmatter.slug}`}>
+					{note.frontmatter.title}
+				</a>
+			</li>
+		))
+	}
+</ul>

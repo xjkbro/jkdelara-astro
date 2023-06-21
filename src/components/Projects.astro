@@ -1,0 +1,41 @@
+---
+const projects = await Astro.glob("../pages/project/*.md");
+projects.sort((a, b) => {
+	// @ts-ignore
+	return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+});
+---
+
+<div class="min-w-[27vw] h-32 md:h-96 text-right">
+	<h2 class="text-2xl mt-4 mr-4 md:text-5xl md:mt-8 md:mr-8">WORK</h2>
+</div>
+<div
+	class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto py-4"
+>
+	<div class="snap-center shrink-0">
+		<div class="shrink-0 w-4 sm:w-1/2"></div>
+	</div>
+	{
+		projects.map((project) => {
+			return (
+				<a
+					href={"/project/" + project.frontmatter.slug}
+					class="snap-center shrink-0 relative"
+				>
+					<div class="absolute top-0 opacity-100 hover:opacity-0 transition-all bg-white/50 bg-blend-lighten h-full w-full grid place-content-center  ">
+						<h2 class="text-white drop-shadow-md font-bold text-xl md:text-3xl">
+							{project.frontmatter.title}
+						</h2>
+					</div>
+					<img
+						class="shrink-0 object-cover aspect-video h-32 md:h-96 rounded-xl border border-neutral-400"
+						src={project.frontmatter.image}
+					/>
+				</a>
+			);
+		})
+	}
+	<div class="snap-center shrink-0">
+		<div class="shrink-0 w-4 sm:w-1/2"></div>
+	</div>
+</div>
