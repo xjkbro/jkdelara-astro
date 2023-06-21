@@ -3,8 +3,7 @@ import SocialItem from "../components/SocialItem.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 
-const notes = await Astro.glob("../pages/notes/*.md");
-console.log(notes[0].frontmatter);
+const notes = await Astro.glob("../pages/note/*.md");
 ---
 
 <Layout title="Welcome to JKDELARA.">
