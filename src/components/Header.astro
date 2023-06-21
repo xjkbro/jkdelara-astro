@@ -1,0 +1,94 @@
+<header class="h-full relative pb-32 md:pb-48 lg:pb-72">
+	<div
+		class="grid grid-cols-8 px-2 md:px-8 w-full absolute pointer-events-none top-0 left-0 h-full"
+	>
+		<!-- <div class="col-span-2 border-r border-r-black"></div> -->
+		<div class="col-span-6"></div>
+	</div>
+	<h1 id="title" class="w-full text-[18vw] text-center tracking-[0.055em]">
+		JKDELARA
+	</h1>
+	<h1
+		id="title-shadow"
+		class="w-full text-[18vw] text-center tracking-[0.055em] absolute top-0 opacity-0"
+	>
+		JKDELARA
+	</h1>
+</header>
+<!-- <hr class="border-b border-black" /> -->
+<svg
+	width="1"
+	height="2560"
+	viewBox="0 0 1 2560"
+	fill="none"
+	xmlns="http://www.w3.org/2000/svg"
+	class="fixed left-[27vw] top-0 h-full scale-x-[4] z-10"
+>
+	<line id="line" x1="0.5" y1="-61" x2="0.499883" y2="2621" stroke="black"
+	></line>
+</svg>
+<style>
+	#title {
+		clip-path: polygon(0 0, 100% 0, 100% 78%, 0 78%);
+	}
+	#title-shadow {
+		color: rgb(0, 0, 0, 0);
+		-webkit-text-stroke: 2px black;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+	}
+</style>
+
+<script>
+	import { gsap } from "gsap";
+	import SplitType from "split-type";
+	const title = new SplitType("#title", { types: "chars" });
+	const tl = gsap.timeline();
+
+	tl.fromTo(
+		"#line",
+		{ scaleY: 0 },
+		{ duration: 0.5, scaleY: 1, delay: 0.5, ease: "circ.out" }
+	);
+
+	tl.fromTo(
+		title.chars,
+		{
+			opacity: 0,
+			y: 500,
+		},
+		{
+			duration: 0.3,
+			y: 0,
+			opacity: 1,
+			stagger: 0.06,
+			delay: 0.3,
+			ease: "circ.out",
+		}
+	);
+	tl.fromTo(
+		"#title-shadow",
+		{ opacity: 0 },
+		{
+			opacity: 1,
+			x: "1vw",
+			y: "1vw",
+			delay: 0.2,
+			duration: 0.6,
+			ease: "circ.out",
+		}
+	);
+	tl.fromTo(
+		"main section",
+		{ opacity: 0, y: 50 },
+		{ opacity: 1, y: 0, delay: 0.7, stagger: 0.3, ease: "circ.out" },
+		"-=2.3"
+	);
+	tl.fromTo(
+		"footer",
+		{ opacity: 0, y: 50 },
+		{ opacity: 1, y: 0, delay: 0.5, ease: "circ.out" },
+		"-=2.3"
+	);
+</script>
