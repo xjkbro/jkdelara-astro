@@ -1,5 +1,5 @@
 ---
-const notes = await Astro.glob("../pages/note/*.md");
+const notes = await Astro.glob("../pages/notes/*.md");
 notes.sort(
 	// @ts-ignore
 	(a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)

@@ -1,5 +1,5 @@
 ---
-const projects = await Astro.glob("../pages/project/*.md");
+const projects = await Astro.glob("../pages/projects/*.md");
 projects.sort(
 	// @ts-ignore
 	(a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
@@ -19,7 +19,7 @@ projects.sort(
 		projects.map((project) => {
 			return (
 				<a href={project.url} class="snap-center shrink-0 relative">
-					<div class="absolute top-0 opacity-100 hover:opacity-0 transition-all bg-white/50 bg-blend-lighten h-full w-full grid place-content-center  ">
+					<div class="absolute top-0 opacity-100 hover:opacity-0 transition-all rounded-xl  bg-neutral-400/50 bg-blend-lighten h-full w-full grid place-content-center  ">
 						<h2 class="text-white drop-shadow-md font-bold text-xl md:text-3xl">
 							{project.frontmatter.title}
 						</h2>
