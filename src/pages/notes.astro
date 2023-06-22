@@ -1,37 +1,35 @@
 ---
+import Highlight from "../components/Highlight.astro";
 import ListLayout from "../layouts/ListLayout.astro";
 const notes = await Astro.glob("../pages/note/*.md");
+notes.sort(
+	// @ts-ignore
+	(a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+);
 ---
 
 <ListLayout title="All Notes">
-	<ul class="flex flex-col gap-2">
+	<section class="flex flex-col gap-4">
 		{
 			notes.map((note) => (
-				<li class="flex flex-between">
-					<a
-						class="underline"
-						href={"/note/" + note.frontmatter.slug}
-					>
-						{note.frontmatter.title}
-					</a>
-				</li>
-			))
-		}
-	</ul>
-	<!-- <div class="mx-2 flex flex-col gap-2">
-		{
-			notes.map((note) => (
-				<a
-					class=" border border-black p-2"
-					href={"/note/" + note.frontmatter.slug}
-				>
-					<div class="underline">{note.frontmatter.title}</div>
-					<div>
-						Published:{" "}
-						{new Date(note.frontmatter.date).toLocaleDateString()}
+				<div class="grid grid-cols-8 items-center">
+					<div class="flex gap-2 col-span-6">
+						<span>
+							{note.frontmatter.categories.map((cat: string) => (
+								<Highlight class=" bg-yellow-400 p-2 rounded-full text-sm">
+									{cat}
+								</Highlight>
+							))}
+						</span>
+						<a class="underline" href={note.url}>
+							{note.frontmatter.title}
+						</a>
 					</div>
-				</a>
+					<div class="col-span-2 text-xs text-right">
+						{new Date(note.frontmatter.date).toDateString()}
+					</div>
+				</div>
 			))
 		}
-	</div> -->
+	</section>
 </ListLayout>

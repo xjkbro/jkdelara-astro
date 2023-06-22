@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import Heading from "../components/Heading.astro";
 
 const { title, image } = Astro.props;
 ---
@@ -17,12 +18,13 @@ const { title, image } = Astro.props;
 	<body>
 		<main class="w-full">
 			<article
-				class="px-4 py-8 md:py-24 md:w-2/3 h-full mx-auto border-l border-r border-black"
+				class="py-8 md:py-24 md:w-2/3 h-full mx-auto border-l border-r border-black"
 			>
-				<h1 class="mb-4"><a href="/">JKDELARA</a></h1>
-
-				<h1 class="text-5xl">{title}</h1>
-				<slot />
+				<Heading />
+				<h1 class="p-4 mb-4 text-5xl">{title}</h1>
+				<div class="px-4">
+					<slot />
+				</div>
 			</article>
 		</main>
 		<Footer />

@@ -4,7 +4,10 @@
 	>
 		<div class="col-span-6"></div>
 	</div>
-	<h1 id="title" class="w-full text-[18vw] text-center tracking-[0.055em]">
+	<h1
+		id="title"
+		class="w-full text-[18vw] text-center tracking-[0.055em] opacity-0"
+	>
 		JKDELARA
 	</h1>
 	<h1
@@ -56,6 +59,7 @@
 		{ scaleY: 0 },
 		{ duration: 0.5, scaleY: 1, delay: 0.5, ease: "circ.out" }
 	);
+	tl.to("#title", { duration: 0.1, opacity: 1 }, "-=0.1");
 
 	tl.fromTo(
 		title.chars,

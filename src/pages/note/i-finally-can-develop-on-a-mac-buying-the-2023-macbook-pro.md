@@ -1,10 +1,12 @@
 ---
 layout: ../../layouts/NotesLayout.astro
 title: I finally can develop on a Mac. Buying the 2023 Macbook Pro.
-slug: i-finally-can-develop-on-a-mac-buying-the-2023-macbook-pro
-date: 2023-06-20T21:56:09.587Z
+date: 2023-03-03T22:56:09.000Z
 description: My journey on finally owning a Mac for development.
 image: /note/i-finally-can-develop-on-a-mac-buying-the-2023-macbook-pro/feature-img.webp
+type: note
+categories:
+    - diary
 ---
 
 Learning to code can be a challenging journey, especially if you have specific goals in mind like building iOS applications. This was the case for me in 2011, a junior in high school, when I started my coding journey, and one of the first things I wanted to do was to build iOS applications. However, I quickly realized that I needed a Mac to develop those applications, and as a Windows user at the time, this was a significant obstacle.

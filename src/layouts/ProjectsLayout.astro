@@ -1,6 +1,8 @@
 ---
 import Footer from "../components/Footer.astro";
-const { title, image } = Astro.props.frontmatter;
+import Heading from "../components/Heading.astro";
+import Highlight from "../components/Highlight.astro";
+const { title, image, github, demo, technologies } = Astro.props.frontmatter;
 ---
 
 <!DOCTYPE html>
@@ -18,27 +20,38 @@ const { title, image } = Astro.props.frontmatter;
 			<article
 				class="py-8 md:py-24 md:w-2/3 mx-auto border-l border-r border-black"
 			>
-				<a class="my-12 p-4 hover:underline" href="/projects"
-					>← Go back</a
-				>
+				<Heading />
 				<h1 class="text-5xl p-4">{title}</h1>
 				<img
 					src={image}
 					class="w-full aspect-video"
 					alt={`${title} feature image`}
 				/>
-
+				<div class="my-4 px-4 flex gap-2">
+					{
+						technologies &&
+							technologies.map((tech: string) => (
+								<Highlight class="bg-yellow-400 rounded-full text-sm p-2">
+									{tech.charAt(0).toUpperCase() +
+										tech.slice(1)}
+								</Highlight>
+							))
+					}
+				</div>
 				<div class="prose !max-w-full rounded-lg p-4 mt-4 mb-12">
 					<slot />
+					<hr />
+					{github && <a href={github}>Github</a>}
+					{demo && <a href={demo}>Demo</a>}
 				</div>
 			</article>
+			<Footer />
 		</main>
-		<Footer />
 	</body>
+	<style is:global>
+		@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+		* {
+			font-family: "JetBrains Mono", monospace;
+		}
+	</style>
 </html>
-<style is:global>
-	@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap");
-	* {
-		font-family: "JetBrains Mono", monospace;
-	}
-</style>

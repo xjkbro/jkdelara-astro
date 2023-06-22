@@ -1,5 +1,9 @@
 ---
 const notes = await Astro.glob("../pages/note/*.md");
+notes.sort(
+	// @ts-ignore
+	(a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+);
 ---
 
 <div class="min-w-[27vw] text-right">
@@ -9,9 +13,7 @@ const notes = await Astro.glob("../pages/note/*.md");
 	{
 		notes.map((note) => (
 			<li class="underline text-xs md:text-normal">
-				<a href={`/note/${note.frontmatter.slug}`}>
-					{note.frontmatter.title}
-				</a>
+				<a href={note.url}>{note.frontmatter.title}</a>
 			</li>
 		))
 	}
