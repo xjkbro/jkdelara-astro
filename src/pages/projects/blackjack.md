@@ -2,8 +2,8 @@
 title: Blackjack
 description: First Interactive Javascript Project.
 date: 2017-09-12T00:17:53.000Z
-image: /project/blackjack/blackjack.png
-draft: false
+image: /project/blackjack/cover.png
+feature: true
 technologies:
     - JavaScript
     - CSS

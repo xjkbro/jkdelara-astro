@@ -3,7 +3,7 @@ layout: ../../layouts/NotesLayout.astro
 title: Simple way to protect your Apache website
 date: 2023-03-04T21:56:09.587Z
 description: Protect your website with a username and password using .htpasswd
-image: /note/i-left-everything-for-my-dream/feature-img.webp
+image: /note/simple-way-to-protect-your-pache-website/cover.webp
 type: note
 categories:
     - diary

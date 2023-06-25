@@ -1,6 +1,9 @@
 ---
 const projects = await Astro.glob("../pages/projects/*.md");
-projects.sort(
+const featuredProjects = projects.filter(
+	(project) => project.frontmatter.feature
+);
+featuredProjects.sort(
 	// @ts-ignore
 	(a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
 );
@@ -16,7 +19,7 @@ projects.sort(
 		<div class="shrink-0 w-4 sm:w-1/2"></div>
 	</div>
 	{
-		projects.map((project) => {
+		featuredProjects.map((project) => {
 			return (
 				<a href={project.url} class="snap-center shrink-0 relative">
 					<div class="absolute top-0 opacity-100 hover:opacity-0 transition-all rounded-xl  bg-neutral-400/50 bg-blend-lighten h-full w-full grid place-content-center  ">

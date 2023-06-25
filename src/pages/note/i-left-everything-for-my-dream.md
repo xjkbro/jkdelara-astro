@@ -3,7 +3,7 @@ layout: ../../layouts/NotesLayout.astro
 title: I Left Everything For My Dream
 date: 2021-09-23T21:56:09.587Z
 description: I finally landed my first job as a web developer.
-image: /note/i-left-everything-for-my-dream/feature-img.webp
+image: /note/i-left-everything-for-my-dream/cover.webp
 type: note
 categories:
     - diary

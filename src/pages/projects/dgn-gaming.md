@@ -4,12 +4,13 @@ title: DGN Gaming
 slug: dgn-gaming
 date: 2023-06-12T21:56:09.587Z
 description: A Valorant e-sports team.
-image: /project/dgn-gaming/dgn-gaming.png
+image: /project/dgn-gaming/cover.png
 type: project
 technologies:
     - gsap
     - vite
     - tailwindcss
+feature: true
 demo: https://dgn.jkbro.dev/
 github: https://github.com/xjkbro/gsap-sandbox/tree/master/dgn-landing
 ---

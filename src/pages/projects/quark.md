@@ -2,8 +2,8 @@
 title: Quark
 description: Particle Engine for Language Quorum
 date: 2019-09-23T00:22:19.706Z
-image: /project/quark/quark.png
-draft: false
+image: /project/quark/cover.png
+feature: true
 technologies:
     - Quorum
 layout: ../../layouts/ProjectsLayout.astro

@@ -1,0 +1,36 @@
+---
+import Highlight from "../../components/Highlight.astro";
+import ListLayout from "../../layouts/ListLayout.astro";
+const notes = await Astro.glob("../../pages/note/*.md");
+const filteredNotes = notes.filter((note) =>
+	note.frontmatter.categories.includes("diary")
+);
+filteredNotes.sort(
+	// @ts-ignore
+	(a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
+);
+---
+
+<ListLayout title="All Diary Notes">
+	<section class="flex flex-col gap-2">
+		{
+			filteredNotes.map((note) => (
+				<div class="grid grid-cols-8 items-center">
+					<div class="flex gap-2 col-span-6 items-center">
+						{note.frontmatter.categories.map((cat: string) => (
+							<Highlight class=" bg-yellow-400 p-2 rounded-full text-sm">
+								<a href={"/notes/" + cat}>{cat}</a>
+							</Highlight>
+						))}
+						<a class="underline" href={note.url}>
+							{note.frontmatter.title}
+						</a>
+					</div>
+					<div class="col-span-2 text-xs text-right">
+						{new Date(note.frontmatter.date).toDateString()}
+					</div>
+				</div>
+			))
+		}
+	</section>
+</ListLayout>

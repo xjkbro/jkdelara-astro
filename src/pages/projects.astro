@@ -8,13 +8,20 @@ projects.sort(
 ---
 
 <ListLayout title="All Projects">
-	<ul class="flex flex-col gap-2 underline">
+	<div
+		class="grid md:grid-cols-3 gap-4 underline place-content-center justify-center"
+	>
 		{
 			projects.map((project) => (
-				<li>
+				<div>
+					<img
+						src={project.frontmatter.image}
+						alt={project.frontmatter.title}
+						class=" aspect-video object-cover"
+					/>
 					<a href={project.url}>{project.frontmatter.title}</a>
-				</li>
+				</div>
 			))
 		}
-	</ul>
+	</div>
 </ListLayout>

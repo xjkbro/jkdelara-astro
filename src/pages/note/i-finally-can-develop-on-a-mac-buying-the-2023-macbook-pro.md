@@ -3,7 +3,7 @@ layout: ../../layouts/NotesLayout.astro
 title: I finally can develop on a Mac. Buying the 2023 Macbook Pro.
 date: 2023-03-03T22:56:09.000Z
 description: My journey on finally owning a Mac for development.
-image: /note/i-finally-can-develop-on-a-mac-buying-the-2023-macbook-pro/feature-img.webp
+image: /note/i-finally-can-develop-on-a-mac-buying-the-2023-macbook-pro/cover.webp
 type: note
 categories:
     - diary

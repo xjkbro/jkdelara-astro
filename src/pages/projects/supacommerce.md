@@ -4,7 +4,7 @@ title: SupaCommerce
 slug: supacommerce
 date: 2023-05-06T21:56:09.587Z
 description: An ecommerce website with an admin dashboard.
-image: /project/supacommerce/supacommerce.png
+image: /project/supacommerce/cover.png
 type: project
 technologies:
     - nextjs
@@ -12,6 +12,7 @@ technologies:
     - tailwindcss
 github: ""
 demo: https://supacommerce.jkbro.dev/
+feature: true
 ---
 
 In my pursuit of improving my current employer's website, I dedicated extensive time to finding the ideal tech stack that could effectively handle all the essential functions required. After weeks of thorough research, I discovered a powerful combination: Next.js for the application's backbone, Supabase as a comprehensive solution encompassing database management, storage for customer downloads, authentication, RLS, web hooks, and an array of other remarkable features. To further elevate the design and theming aspects, I relied on TailwindCSS and DaisyUI. Lastly, for seamless payment processing, I incorporated Stripe. While this tech stack may appear straightforward, it was the introduction of Supabase, particularly their exceptional storage buckets, that proved to be the pivotal component. I deliberately avoided utilizing any AWS services for this project.

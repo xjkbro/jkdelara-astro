@@ -9,18 +9,16 @@ notes.sort(
 ---
 
 <ListLayout title="All Notes">
-	<section class="flex flex-col gap-4">
+	<section class="flex flex-col gap-2">
 		{
 			notes.map((note) => (
 				<div class="grid grid-cols-8 items-center">
-					<div class="flex gap-2 col-span-6">
-						<span>
-							{note.frontmatter.categories.map((cat: string) => (
-								<Highlight class=" bg-yellow-400 p-2 rounded-full text-sm">
-									{cat}
-								</Highlight>
-							))}
-						</span>
+					<div class="flex gap-2 col-span-6 items-center">
+						{note.frontmatter.categories.map((cat: string) => (
+							<Highlight class=" bg-yellow-400 p-2 rounded-full text-sm">
+								{cat}
+							</Highlight>
+						))}
 						<a class="underline" href={note.url}>
 							{note.frontmatter.title}
 						</a>

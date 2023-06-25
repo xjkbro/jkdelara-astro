@@ -2,8 +2,8 @@
 title: MaxReps
 description: Fitness Tracker Social Platform
 date: 2020-02-10T00:30:59.091Z
-image: /project/max-reps/max-reps.png
-draft: false
+image: /project/max-reps/cover.png
+feature: true
 technologies:
     - MongoDB
     - NodeJS
