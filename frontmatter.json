@@ -1,213 +1,219 @@
 {
-	"$schema": "https://frontmatter.codes/frontmatter.schema.json",
-	"frontMatter.taxonomy.contentTypes": [
-		{
-			"name": "note",
-			"pageBundle": false,
-			"previewPath": "'note'",
-			"fields": [
-				{
-					"title": "Title",
-					"name": "title",
-					"type": "string"
-				},
-				{
-					"title": "Description",
-					"name": "description",
-					"type": "string"
-				},
-				{
-					"title": "Publishing date",
-					"name": "date",
-					"type": "datetime",
-					"default": "{{now}}",
-					"isPublishDate": true
-				},
-				{
-					"title": "Feature Image",
-					"name": "image",
-					"type": "image",
-					"isPreviewImage": true
-				},
-				{
-					"title": "Is in draft",
-					"name": "draft",
-					"type": "draft"
-				},
-				{
-					"title": "Layout",
-					"name": "layout",
-					"type": "choice",
-					"default": "../../layouts/NotesLayout.astro",
-					"choices": [
-						{
-							"id": "../../layouts/NotesLayout.astro",
-							"title": "NotesLayout"
-						}
-					]
-				},
-				{
-					"title": "Categories",
-					"name": "categories",
-					"type": "categories"
-				},
-				{
-					"title": "Type",
-					"name": "type",
-					"type": "choice",
-					"default": "note",
-					"choices": [
-						{
-							"id": "note",
-							"title": "note"
-						}
-					]
-				}
-			]
-		},
-		{
-			"name": "project",
-			"pageBundle": false,
-			"previewPath": "'project'",
-			"fields": [
-				{
-					"title": "Title",
-					"name": "title",
-					"type": "string"
-				},
-				{
-					"title": "Description",
-					"name": "description",
-					"type": "string"
-				},
-				{
-					"title": "Publishing date",
-					"name": "date",
-					"type": "datetime",
-					"default": "{{now}}",
-					"isPublishDate": true
-				},
-				{
-					"title": "Feature Image",
-					"name": "image",
-					"type": "image",
-					"isPreviewImage": true
-				},
-				{
-					"title": "Show Homepage",
-					"name": "feature",
-					"type": "boolean"
-				},
-				{
-					"title": "Technologies",
-					"name": "technologies",
-					"type": "tags"
-				},
-				{
-					"title": "Layout",
-					"name": "layout",
-					"type": "choice",
-					"default": "../../layouts/ProjectsLayout.astro",
-					"choices": [
-						{
-							"id": "../../layouts/ProjectsLayout.astro",
-							"title": "ProjectsLayout"
-						}
-					]
-				},
-				{
-					"title": "Type",
-					"name": "type",
-					"type": "choice",
-					"default": "project",
-					"choices": [
-						{
-							"id": "project",
-							"title": "project"
-						}
-					]
-				},
-				{
-					"title": "GitHub",
-					"name": "github",
-					"type": "string"
-				},
-				{
-					"title": "Demo",
-					"name": "demo",
-					"type": "string"
-				}
-			]
-		}
-	],
-	"frontMatter.framework.id": "astro",
-	"frontMatter.framework.name": "Astro",
-	"frontMatter.framework.startCommand": "pnpm dev",
-	"frontMatter.content.publicFolder": "public",
-	"frontMatter.templates.prefix": "",
-	"frontMatter.preview.host": "http://localhost:3000",
-	"frontMatter.content.pageFolders": [
-		{
-			"title": "Notes",
-			"path": "[[workspace]]/src/pages/note"
-		},
-		{
-			"title": "Projects",
-			"path": "[[workspace]]/src/pages/projects"
-		}
-	],
-	"frontMatter.taxonomy.tags": [
-		"Astro",
-		"JavaScript",
-		"NextJS",
-		"React",
-		"TailwindCSS",
-		"TypeScript",
-		"GSAP",
-		"Motion",
-		"Vite",
-		"WebPack",
-		"ThreeJS",
-		"Framer Motion",
-		"BootstrapCSS",
-		"CSS",
-		"DaisyUI",
-		"HTML",
-		"C++",
-		"Python",
-		"Rust",
-		"Deno",
-		"NodeJS",
-		"ExpressJS",
-		"MongoDB",
-		"PostgreSQL",
-		"SQLite",
-		"Redis",
-		"GraphQL",
-		"Prisma",
-		"DrizzleORM",
-		"Firebase",
-		"NextAuth",
-		"Auth0",
-		"Supabase",
-		"GCP",
-		"Heroku",
-		"AWS",
-		"Azure",
-		"Java",
-		"Markdown",
-		"PHP",
-		"Ruby",
-		"Swift",
-		"PhaserJS",
-		"Quorum",
-		"Unity",
-		"SCSS",
-		"Styled Components",
-		"Sanity",
-		"WordPress",
-		"jQuery",
-		"shadcn/ui"
-	],
-	"frontMatter.taxonomy.categories": ["code", "diary", "food"]
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "note",
+      "pageBundle": false,
+      "previewPath": "'note'",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Feature Image",
+          "name": "image",
+          "type": "image",
+          "isPreviewImage": true
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Layout",
+          "name": "layout",
+          "type": "choice",
+          "default": "../../layouts/NotesLayout.astro",
+          "choices": [
+            {
+              "id": "../../layouts/NotesLayout.astro",
+              "title": "NotesLayout"
+            }
+          ]
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "type": "choice",
+          "default": "note",
+          "choices": [
+            {
+              "id": "note",
+              "title": "note"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "project",
+      "pageBundle": false,
+      "previewPath": "'project'",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Feature Image",
+          "name": "image",
+          "type": "image",
+          "isPreviewImage": true
+        },
+        {
+          "title": "Show Homepage",
+          "name": "feature",
+          "type": "boolean"
+        },
+        {
+          "title": "Technologies",
+          "name": "technologies",
+          "type": "tags"
+        },
+        {
+          "title": "Layout",
+          "name": "layout",
+          "type": "choice",
+          "default": "../../layouts/ProjectsLayout.astro",
+          "choices": [
+            {
+              "id": "../../layouts/ProjectsLayout.astro",
+              "title": "ProjectsLayout"
+            }
+          ]
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "type": "choice",
+          "default": "project",
+          "choices": [
+            {
+              "id": "project",
+              "title": "project"
+            }
+          ]
+        },
+        {
+          "title": "GitHub",
+          "name": "github",
+          "type": "string"
+        },
+        {
+          "title": "Demo",
+          "name": "demo",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "astro",
+  "frontMatter.framework.name": "Astro",
+  "frontMatter.framework.startCommand": "pnpm dev",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.templates.prefix": "",
+  "frontMatter.preview.host": "http://localhost:3000",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "Notes",
+      "path": "[[workspace]]/src/pages/note"
+    },
+    {
+      "title": "Projects",
+      "path": "[[workspace]]/src/pages/projects"
+    }
+  ],
+  "frontMatter.taxonomy.tags": [
+    "AWS",
+    "Astro",
+    "Auth0",
+    "Azure",
+    "BootstrapCSS",
+    "C++",
+    "CSS",
+    "DaisyUI",
+    "Deno",
+    "DrizzleORM",
+    "ExpressJS",
+    "Firebase",
+    "Framer Motion",
+    "GCP",
+    "GSAP",
+    "GraphQL",
+    "HTML",
+    "Heroku",
+    "Java",
+    "JavaScript",
+    "Markdown",
+    "MongoDB",
+    "Motion",
+    "MySQL",
+    "NextAuth",
+    "NextJS",
+    "NodeJS",
+    "PHP",
+    "PhaserJS",
+    "PostgreSQL",
+    "Prisma",
+    "Python",
+    "Quorum",
+    "React",
+    "Redis",
+    "Ruby",
+    "Rust",
+    "SCSS",
+    "SQLite",
+    "Sanity",
+    "Stripe",
+    "Styled Components",
+    "Supabase",
+    "Swift",
+    "TailwindCSS",
+    "ThreeJS",
+    "TypeScript",
+    "Unity",
+    "Vite",
+    "WebPack",
+    "WordPress",
+    "jQuery",
+    "shadcn/ui"
+  ],
+  "frontMatter.taxonomy.categories": [
+    "code",
+    "diary",
+    "food"
+  ]
 }

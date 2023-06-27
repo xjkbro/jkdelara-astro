@@ -13,14 +13,14 @@ projects.sort(
 	>
 		{
 			projects.map((project) => (
-				<div>
+				<a href={project.url}>
 					<img
 						src={project.frontmatter.image}
 						alt={project.frontmatter.title}
 						class=" aspect-video object-cover"
 					/>
-					<a href={project.url}>{project.frontmatter.title}</a>
-				</div>
+					<span>{project.frontmatter.title}</span>
+				</a>
 			))
 		}
 	</div>
