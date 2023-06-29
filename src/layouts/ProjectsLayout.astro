@@ -48,11 +48,11 @@ const views = updateView("projects", Astro.props.url.split("/")[2]);
 					alt={`${title} feature image`}
 				/>
 				<div class="flex justify-between items-center px-4 my-4">
-					<div class="flex gap-2">
+					<div class="flex gap-2 flex-wrap">
 						{
 							technologies &&
 								technologies.map((tech: string) => (
-									<Highlight class="bg-yellow-400 rounded-full text-sm p-2">
+									<Highlight>
 										{tech.charAt(0).toUpperCase() +
 											tech.slice(1)}
 									</Highlight>
