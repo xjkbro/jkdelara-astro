@@ -13,7 +13,8 @@ featuredProjects.sort(
 	<h2 class="text-2xl mt-4 mr-4 md:text-5xl md:mt-8 md:mr-8">WORK</h2>
 </div>
 <div
-	class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto py-4"
+	id="scrollable-element"
+	class="relative w-full flex gap-6 overflow-x-auto py-4"
 >
 	<div class="snap-center shrink-0">
 		<div class="shrink-0 w-4 sm:w-1/2"></div>
@@ -39,3 +40,38 @@ featuredProjects.sort(
 		<div class="shrink-0 w-4 sm:w-1/2"></div>
 	</div>
 </div>
+
+<script>
+	let scrollableElement = document.getElementById("scrollable-element")!;
+	/**
+	 * Transfer vertical to horizontal scroll on projects div
+	 */
+	scrollableElement.addEventListener("wheel", (ev) => {
+		ev.preventDefault(); // stop scrolling in another direction
+		scrollableElement.scrollLeft += ev.deltaY + ev.deltaX;
+	});
+
+	let mouseDown = false;
+	let startX = 0;
+	let scrollLeft = 0;
+	const startDrag = (e: MouseEvent) => {
+		mouseDown = true;
+		startX = e.pageX - scrollableElement.offsetLeft;
+		scrollLeft = scrollableElement.scrollLeft;
+	};
+	const stopDrag = (e: MouseEvent) => {
+		mouseDown = false;
+	};
+	scrollableElement.addEventListener("mousemove", (e) => {
+		e.preventDefault();
+		if (!mouseDown) {
+			return;
+		}
+		const x = e.pageX - scrollableElement.offsetLeft;
+		const walk = x - startX; //scroll-fast
+		scrollableElement.scrollLeft = scrollLeft - walk;
+	});
+	scrollableElement.addEventListener("mousedown", startDrag, false);
+	scrollableElement.addEventListener("mouseup", stopDrag, false);
+	scrollableElement.addEventListener("mouseleave", stopDrag, false);
+</script>
