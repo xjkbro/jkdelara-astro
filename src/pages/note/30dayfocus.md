@@ -3,7 +3,6 @@ title: "#30DayFocus: A Journey of Setting and Achieving Goals"
 description: "The #30DayFocus challenge is a journey of setting and achieving goals."
 date: 2023-07-05T18:16:46.510Z
 image: /note/30dayfocus/cover.png
-draft: true
 layout: ../../layouts/NotesLayout.astro
 categories:
     - diary

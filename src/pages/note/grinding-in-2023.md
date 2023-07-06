@@ -3,7 +3,6 @@ title: Grinding In 2023
 description: Take a look at my yearly and personal goals.
 date: 2023-03-05T07:18:40.000Z
 image: /note/grinding-in-2023/cover.webp
-draft: true
 layout: ../../layouts/NotesLayout.astro
 categories:
     - code
