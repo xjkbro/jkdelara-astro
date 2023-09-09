@@ -11,10 +11,13 @@ notes.sort(
 </div>
 <ul class="w-fit min-h-[12rem] pl-8 flex flex-col gap-2 my-4">
 	{
-		notes.slice(0, 10).map((note) => (
-			<li class="underline text-xs md:text-normal">
-				<a href={note.url}>{note.frontmatter.title}</a>
-			</li>
-		))
+		notes.slice(0, 10).map((note) => {
+			if (note.frontmatter.draft) return null;
+			return (
+				<li class="underline text-xs md:text-normal">
+					<a href={note.url}>{note.frontmatter.title}</a>
+				</li>
+			);
+		})
 	}
 </ul>

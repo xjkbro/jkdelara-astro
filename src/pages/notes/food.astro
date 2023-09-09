@@ -2,8 +2,10 @@
 import Highlight from "../../components/Highlight.astro";
 import ListLayout from "../../layouts/ListLayout.astro";
 const notes = await Astro.glob("../../pages/note/*.md");
-const filteredNotes = notes.filter((note) =>
-	note.frontmatter.categories.includes("food")
+const filteredNotes = notes.filter(
+	(note) =>
+		note.frontmatter.categories.includes("food") &&
+		note.frontmatter.draft !== true
 );
 filteredNotes.sort(
 	// @ts-ignore

@@ -2,7 +2,8 @@
 import Highlight from "../../components/Highlight.astro";
 import ListLayout from "../../layouts/ListLayout.astro";
 const notes = await Astro.glob("../../pages/note/*.md");
-notes.sort(
+const filteredNotes = notes.filter((note) => note.frontmatter.draft !== true);
+filteredNotes.sort(
 	// @ts-ignore
 	(a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
 );
@@ -11,7 +12,7 @@ notes.sort(
 <ListLayout title="All Notes">
 	<section class="flex flex-col gap-2">
 		{
-			notes.map((note) => (
+			filteredNotes.map((note) => (
 				<div class="grid grid-cols-8 items-center">
 					<div class="flex gap-2 col-span-6 items-center">
 						{note.frontmatter.categories.map((cat: string) => (
