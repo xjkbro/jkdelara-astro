@@ -7,6 +7,7 @@ layout: ../../layouts/NotesLayout.astro
 categories:
     - code
 type: note
+draft: true
 ---
 
 As a Computer Science graduate, I've always been interested in movies and shows that involve computer science. Whether you aren't familiar with computer science or you're a senior engineer, these movies and shows are sure to entertain. In fact, one of my favorite movies listed is the reason why I took on computer science as a major in college.
