@@ -123,14 +123,14 @@ God, by health has been at an all time low. I've been at the gym more consistent
 ```
 
 I did go to TwitchCon since it was where I lived. GUESS What?? I met these guys!
-![Tech twitter guys prime adam and rox](/public/note/update-into-2024/IMG_6009.jpeg)
+![Tech twitter guys prime adam and rox](/note/update-into-2024/IMG_6009.jpeg)
 
 ```markdown
 -   Start going to coding meetups and conferences.
 ```
 
 Something I'm still interested in but theres a lack of meetups in Las Vegas. However my job is making me go to conferences so I guess that counts. It was a Samsung Developer Conference. Amazing people, I wish to see them again.
-![Samsung Business Summit 2023](/public/note/update-into-2024/SBSS2023.jpg)
+![Samsung Business Summit 2023](/note/update-into-2024/SBSS2023.jpg)
 
 ```markdown
 -   Do my first Raspberry Pi Project
