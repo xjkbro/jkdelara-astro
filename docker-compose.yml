@@ -1,0 +1,30 @@
+services:
+  jkdelara:
+    build: .
+    container_name: jkdelara
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - traefik-public
+    command: bun run preview
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /home/jason/jkdelara/data:/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jkdelara.entrypoints=http"
+      - "traefik.http.routers.jkdelara.rule=Host(`portfolio.jsondelara.com`)"
+      - "traefik.http.middlewares.jkdelara-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.jkdelara.middlewares=jkdelara-https-redirect"
+      - "traefik.http.routers.jkdelara-secure.entrypoints=https"
+      - "traefik.http.routers.jkdelara-secure.rule=Host(`portfolio.jsondelara.com`)"
+      - "traefik.http.routers.jkdelara-secure.tls=true"
+      - "traefik.http.routers.jkdelara-secure.service=jkdelara"
+      - "traefik.http.services.jkdelara.loadbalancer.server.port=3000"
+      - "traefik.docker.network=traefik-public"
+networks:
+  traefik-public:
+    external: true
+
