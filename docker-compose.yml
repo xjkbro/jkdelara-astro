@@ -11,7 +11,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /home/jason/jkdelara/data:/data
+      - /home/jason/traefik/sites/jkdelara-astro/data:/data
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.jkdelara.entrypoints=http"
