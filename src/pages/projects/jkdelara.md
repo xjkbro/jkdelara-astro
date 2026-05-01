@@ -3,7 +3,7 @@ title: jkdelara
 description: My personal portfolio website
 date: 2023-06-26T00:44:58.000Z
 image: /project/jkdelara/cover.png
-feature: true
+feature: false
 technologies:
     - Firebase
     - GSAP
